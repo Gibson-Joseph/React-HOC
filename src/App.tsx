@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+import UserList from "./components/hoc/UserList";
+import TodoList from "./components/hoc/TodoList";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Higher Order Components</h1>
+      {/* <ClickCounter name="Gibson" />
+      <HoverCounter name="Joseph" /> */}
+
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <UserList />
+        <TodoList />
+      </div>
     </div>
   );
 }
